@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=formule.css>
+    <script>
+     function check(){
+         let email = document.forms["vform"]["email"];
+         let email_erreur = document.getElementById("email_erreur");
+          let mdp = document.forms["vform"]["mdp"];
+         let mdp_erreur = document.getElementById("mdp_erreur");
+         if(mdp.value !== ""){
+             mdp_erreur.textContent = "";
+         }
+         if(email.value !== ""){
+             email_erreur.textContent = "";
+         }
+         if(email.value == ""){
+             email_erreur.textContent = "entrez une adresse email !";
+             email_erreur.style = "color:red";
+             return false;
+         }
+         
+         if(mdp.value == ""){
+             mdp_erreur.textContent = "entrez un mot de passe !";
+             mdp_erreur.style = "color:red";
+             return false;
+         }
+         
+         return true;
+     }
+    </script>
+    <title>
+    </title>
+</head>
+<body>
+   <div class=p>
+       
+           <div class=a1><a href="principale.html"><h1><em>my</em>prof</h1> </a> </div>
+         
+      
+       <div class=b>
+           <div class=b1><h2>Se connecter</h2></div>
+           <div class=b2><form action="page.php" name="vform" onsubmit="return check()">
+        
+               <input  type="text" placeholder="Email" name="email">
+               <div id="email_erreur"></div>
+               
+               <input   type="password" placeholder="Mot de passe" name="mdp">
+               <div id="mdp_erreur"></div>
+               
+                   <button type="submit" values="Se conecter">se connecter</button>
+                   <a href=formulaire.html>S'inscrire</a>
+               
+           </form></div>
+       </div>
+       
+   </div>
+    
+</body>
+</html

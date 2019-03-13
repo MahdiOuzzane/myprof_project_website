@@ -1,0 +1,12 @@
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.photo{
+    width: 10 px;
+    height: 10 px;
+}
+.nom{
+    color :red;
+}
